@@ -1,40 +1,43 @@
-
 #include<stdio.h>
-#include<conio.h>
-#include<math.h>
-void main()
+int main(void)
 {
-   long int a[20],i,j,n,temp,c;
-   long int sum=0;
-   clrscr();
-   scanf("%ld",&n);
-for(i=0;i<n;i++)
-{
-  scanf("%d",&a[i]);
-}
-for(i=0;i<n;i++)
-{
- for(j=i+1;j<n;j++)
- {
-  if(a[j]>a[i])
- {
-  temp=a[i];
-  a[i]=a[j];
-  a[j]=temp;
- }
- }
-}
-for(i=0;i<n-1;i++)
-{
-  temp=a[i+1];
-  c=0;
-  while(temp!=0)
-  {
-    temp=temp/10;
-    c++;
-  }
-  sum=(sum*pow(10,c))+a[i+1];
-}
-printf("\n%ld",sum);
-getch();
+	int registation[100],a[50];
+	int i,j,reg,k=0,flag=0;;
+	printf("Enter the number of registrations\n");
+	scanf("%d",&reg);
+	for(i=0;i<reg;i++)
+	scanf("%d",&registation[i]);
+	for(i=0;i<reg;i++)
+	{
+	    for(j=0;j<k;j++)
+	    {
+	        if(registation[i]==registation[a[j]])
+	        {
+	            flag=1;
+	         }
+	    }  
+	    if(flag==1)
+	    {
+	        flag=0;
+	         continue;
+	    
+	    }
+		
+		for(j=0;j<reg;j++)
+		{
+			if(registation[i]==registation[j]&& flag==0)
+			{
+			 a[k++]=i;
+			 flag=1;
+			  
+			}
+		}
+		flag=0;
+	}
+	for(i=0;i<k;i++)
+	   printf("Repeated numbers are:%d\n",registation[a[i]]);
+	
+	return 0;
+	
+	
 }
