@@ -1,4 +1,4 @@
-public String longestCommonPrefix(ArrayList<String> a) {
+public String lcp(ArrayList<String> a) {
     String str="";
  if(a.size()==0)
  {

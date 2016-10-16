@@ -1,6 +1,6 @@
 include <stdio.h>
 
-int delete_one(int data[], int i, int n)
+int del_one(int data[], int i, int n)
 {
 	int prev = -1;
 	int prev_i;

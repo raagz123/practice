@@ -2,7 +2,7 @@
 void main()
 {
     int stack[1000],i,n1,n,j,row=0,col=0,inc=0,flag=0,temp;
-    int fis[1000],s3[1000],value[1000];
+    int fist[1000],s3[1000],value[1000];
     scanf("%d",&n1);
     for(i=0;i<n;i++)
     {
@@ -12,7 +12,7 @@ void main()
     {
         for(j=i+1;j<n;j++)
         {
-            fis[inc]=stack[i];
+            fist[inc]=stack[i];
             s3[inc]=stack[j];
             value[inc]=stack[i]+stack[j];
             inc++;
@@ -29,8 +29,8 @@ void main()
                 value[i]=value[i+1];
                 value[i+1]=temp;
                 temp=fis[i];
-                fis[i]=fis[i+1];
-                fis[i+1]=temp;
+                fist[i]=fist[i+1];
+                fisti+1]=temp;
                 temp=s3[i];
                 s3[i]=s3[i+1];
                 s3[i+1]=temp;
@@ -41,6 +41,6 @@ void main()
         {
             break;
         }
-        printf("%d %d",fis[0],s3[0]);
+        printf("%d %d",fist[0],s3[0]);
     }
 }

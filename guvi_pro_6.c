@@ -36,7 +36,7 @@ int maxCrossingSum(int arr[], int l, int m, int h)
 }
 
 // Returns sum of maxium sum subarray in aa[l..h]
-int maxSubArraySum(int arr[], int l, int h)
+int maxSubArrSum(int arr[], int l, int h)
 {
    // Base Case: Only one element
    if (l == h)
@@ -49,8 +49,8 @@ int maxSubArraySum(int arr[], int l, int h)
       a) Maximum subarray sum in left half
       b) Maximum subarray sum in right half
       c) Maximum subarray sum such that the subarray crosses the midpoint */
-   return max(maxSubArraySum(arr, l, m),
-              maxSubArraySum(arr, m+1, h),
+   return max(maxSubArrSum(arr, l, m),
+              maxSubArrSum(arr, m+1, h),
               maxCrossingSum(arr, l, m, h));
 }
 
@@ -59,7 +59,7 @@ int main()
 {
    int arr[] = {2, 3, 4, 5, 7};
    int n = sizeof(arr)/sizeof(arr[0]);
-   int max_sum = maxSubArraySum(arr, 0, n-1);
+   int max_sum = maxSubArrSum(arr, 0, n-1);
    printf("Maximum contiguous sum is %d\n", max_sum);
    getchar();
    return 0;
