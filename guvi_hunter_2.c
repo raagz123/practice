@@ -2,7 +2,7 @@
 
 void main ()
 {
-    int number[30];
+    int num[30];
 	int big
     int i, j, a, n;
 
@@ -10,17 +10,17 @@ void main ()
     scanf("%d", &n);
     printf("Enter the numbers \n");
     for (i = 0; i < n; ++i)
-    scanf("%d", &number[i]);
+    scanf("%d", &num[i]);
 
     for (i = 0; i < n; ++i)
     {
         for (j = i + 1; j < n; ++j)
         {
-            if (number[i] < number[j])
+            if (num[i] < num[j])
             {
-                a = number[i];
-                number[i] = number[j];
-                number[j] = a;
+                a = num[i];
+                num[i] = num[j];
+                num[j] = a;
             }
         }
     }
@@ -30,7 +30,7 @@ void main ()
 	printf("The numbers arranged in descending order are given below\n");
     for (i = n-1; i >=0; i--)
     {
-	      big+=number[i]*10^(j);
+	      big+=num[i]*10^(j);
 
 		j++;
 	}
